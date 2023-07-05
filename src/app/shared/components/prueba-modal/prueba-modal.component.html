@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="text-center mb-2-3 mb-lg-6">
+        <h2 class="h1 mb-0 text-secondary">INDICADORES DE ACCIÓN ESTRATÉGICA</h2>
+    </div>
+    <hr>
+    <div mat-dialog-container>
+
+        <div class="table-responsive">
+            <table class="table table-bordered text-center">
+                <thead style="padding: 2rem;">
+                    <tr class="bg-light-gray">
+                        <th class="text-uppercase">Indicador</th>
+                        <th class="text-uppercase">Linea Base</th>
+                        <th class="text-uppercase">Meta Vigente</th>
+                        <th class="text-uppercase">% Avance</th>
+                        <th class="text-uppercase">Responsable</th>
+                    </tr>
+                </thead>
+    
+                <tbody >
+                    <tr *ngFor="let detalle of accionesModel">
+                        <td style="padding: 2rem;">
+                            <p class="m-0 font-12">
+                                {{detalle.descripcion}} 
+                            </p>
+                        </td>
+    
+                        <td class="align-middle">
+                            <p class="m-0 font-12">
+                                {{detalle.lineaBase}} %
+                            </p>
+                        </td>
+    
+                        <td class="align-middle">
+                            <p class="m-0 font-12">
+                                {{detalle.lineaBase}} %
+                            </p>
+                        </td>
+                        <td class="align-middle">
+                            <p class="m-0 font-12">
+                                {{detalle.lineaBase}} %
+                            </p>
+                        </td>
+                        <td class="align-middle">
+                            <p class="m-0 font-12">
+                               Juan
+                            </p>
+    
+                        </td>
+                    </tr>
+    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> 
+<!-- <button mat-raised-button (click)="goBack()">Volver</button> -->
+
+<h1 mat-dialog-title>Dialog with elements</h1>
+<div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>

@@ -1,0 +1,36 @@
+
+<div class="container bootstrap snippets bootdey">
+    <div class="row">
+		<div class="col-md-12">
+		    <div class="blog-comment">
+                <div class="text-center mb-2-3 mb-lg-6">
+                    <h2 class="h1 mb-0 text-secondary">OBJETIVO ESTRATÉGICO</h2>
+                </div>
+                <hr/>
+				<button type="button" class="btn btn-dark btn-sm" (click)="openDialog()" ><i class="fa fa-plus"></i> CREAR</button>
+				<br>
+				<br>
+				<ul class="comments" [ngClass]= "{'active':objetivos.id == selectedId}" *ngFor="let objetivos of dataObj; let i = index">
+				<li class="clearfix"  [ngClass]= "{'active':objetivos.id == selectedId}" >
+					
+					<button (click)="selectObjetivo(objetivos.id)"  [ngClass]= "{'active':objetivos.id == selectedId}"  mat-button matStepperNext class=" porcentaje btn dim btn-large-dim" type="button" (click)="selectButton(objetivos.id)">{{objetivos.lineaBase}}%</button>     
+				  <button (click)="selectObjetivo(objetivos.id)"  [ngClass]= "{'active':objetivos.id == selectedId}"  mat-button matStepperNext class=" porcentaje btn dim btn-large-dim" type="button" (click)="selectButton(objetivos.id)">{{objetivos.codigoInterno}}</button>  
+				  <div class="post-comments">
+				      <p  [ngClass]= "{'active':objetivos.id == selectedId}" >
+				          {{objetivos.descripcion}}
+				    
+					  	<button mat-icon-button class="btnleft" (click)="delete(objetivos.id,1)" >
+							<mat-icon color="warn" >delete</mat-icon>
+						</button>
+						</p>
+					
+					
+				  </div>
+				</li>
+			
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+</div> 

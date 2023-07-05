@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="">
+                <div class="table-responsive">
+                    <table class="table project-list-table table-nowrap align-middle table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">Indicador</th>
+                                <th scope="col">Alcance</th>
+                                <th scope="col">Meta</th>
+                                <th scope="col">Avance</th>
+                                <th scope="col">Url</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  style="background: red;" *ngFor="let indicadores of indicador.poa">
+                                
+                                <td>
+                                    <button matStepperNext style="border: none;  background: white;"  class="m-0 font-12" >
+                                        <input mat-button type="button"readonly class="form-control" value="{{indicadores.indicador}}%">
+                                    </button>
+                                </td>
+
+                                <td>
+                                    {{indicadores.alcance}}
+                                </td>
+
+                                <td>
+                                    {{indicadores.meta}}
+                                </td>
+                                
+                                <td>
+                                    <button matStepperNext style="border: none; background: white;"class="m-0 font-12" >
+                                        <input [ngClass]="{'red': 50>indicadores.avance, 'yellow': indicadores.avance >= 50 && 60 >= indicadores.avance, 'green': indicadores.avance > 60}" mat-button type="button"readonly class="form-control"
+                                        value="{{indicadores.avance}}%">
+                                    </button>
+                                </td>
+
+                                <td>
+                                    {{indicadores.url}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

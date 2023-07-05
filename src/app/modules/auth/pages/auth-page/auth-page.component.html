@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <section>
+    <div class="form-box">
+      <div class="form-value">
+        <form [formGroup]="formLogin" (ngSubmit)="onLogin(formLogin.value)">
+          <h2>INICIA SESIÓN</h2>
+
+          <!-- Usuario -->
+          <div class="inputbox">
+
+            <input formControlName="nombreDeUsuario" type="text" required>
+            <label for="nombreDeUsuario">USUARIO</label>
+          </div>
+
+          <!-- password -->
+          <div class="inputbox">
+
+            <input formControlName="contrasenia" type="password" required>
+            <label for="contrasenia">CONTRASEÑA</label>
+          </div>
+          <!-- rol -->
+          <div class="inputbox">
+
+            <select formControlName="rol">
+              <option>ADMINISTRADOR</option>
+              <option>EMPLEADO</option>
+            </select>
+          </div>
+
+          <div class="register">
+            <button [disabled]="formLogin.invalid" type="submit">Iniciar sesión</button>
+          </div>
+          <br>
+          <div class="alert alert-danger " *ngIf="errorStatus">
+            <p>{{errorMsj}}</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

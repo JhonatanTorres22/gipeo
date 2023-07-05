@@ -1,0 +1,83 @@
+<!-- <br>
+
+<div mat-dialog-content class="container" >
+    <div class="table-responsive">
+        <table class="table table-bordered text-center">
+            <thead style="padding: 2rem;">
+                <tr class="bg-light-gray">
+                    <th class="text-uppercase">Indicador</th>
+                    <th class="text-uppercase">2023</th>
+                    <th class="text-uppercase">2024</th>
+                    <th class="text-uppercase">2025</th>
+                    <th class="text-uppercase">2026</th>
+                   
+                </tr>
+            </thead>
+
+            <tbody >
+                <tr *ngFor="let detalle of accionesModel" >
+                    <td style="padding: 2rem;">
+                        <p class="m-0 font-12">
+                            {{detalle.lineaBase}}
+                        </p>
+                    </td>
+
+                    <td class="align-middle">
+                        <p class="m-0 font-12">
+                           
+                        </p>
+                    </td>
+
+                    <td class="align-middle">
+                        <p class="m-0 font-12">
+                            
+                        </p>
+                    </td>
+                    <td class="align-middle">
+                        <p class="m-0 font-12">
+                          
+                        </p>
+                    </td>
+                    <td class="align-middle">
+                        <p class="m-0 font-12">
+                           
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button (click)="cerrarModal()" type="button" class="btn btn-success" > CERRAR</button>
+</div>  -->
+
+<!-- <form class="form">
+    <h2>CONTACT US</h2>
+    <p type="Name:"><input placeholder="Write your name here.."></input></p>
+    <p type="Email:"><input placeholder="Let us know how to contact you back.."></input></p>
+    <p type="Message:"><input placeholder="What would you like to tell us.."></input></p>
+    <button>Send Message</button>
+    <div>
+      <span class="fa fa-phone"></span>001 1023 567
+      <span class="fa fa-envelope-o"></span> contact@company.com
+    </div>
+  </form> -->
+<h2 mat-dialog-title> INSERTAR OBJETIVOS ESTRATEGICOS</h2>
+<mat-dialog-content class = "mat-typography">
+<form  class="form">
+    <div class="mb-3">
+        <p type="Codigo Interno" ><input type="text" class="form-control" name="objetivo.codigoInterno" placeholder="Ingrese Codigo Interno" [(ngModel)]="objetivo.codigoInterno"/></p>
+   <br>
+        <input type="text" class="form-control" name="objetivo.descripcion" placeholder="Ingrese Descripcion" [(ngModel)]="objetivo.descripcion"/>
+   <br>
+        <input type="text" class="form-control" name="objetivo.indicador" placeholder="Ingrese Indicador" [(ngModel)]="objetivo.indicador"/>
+    <br>
+        <input type="text" class="form-control" name="objetivo.lineaBase" placeholder="Ingrese Linea Base" [(ngModel)]="objetivo.lineaBase"/>
+    <br>
+    <input type="text" class="form-control" name="objetivo.lineaBase" placeholder="Ingrese Usurio modificación" [(ngModel)]="objetivo.usuarioModificacion"/>
+ </div>
+</form> 
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close class="btn btnc">CERRAR</button> 
+    <button class="btn btnr" role="button" (click)="create()">CONFIRMAR</button>
+</mat-dialog-actions>

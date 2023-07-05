@@ -1,0 +1,27 @@
+<div class="container bootstrap snippets bootdey">
+    <div class="row">
+		<div class="col-md-12">
+		    <div class="blog-comment">
+				<div class="text-center mb-2-3 mb-lg-6">
+                    <h2 class="h1 mb-0 text-secondary">ACCIÓN ESTRATÉGICA</h2>
+                </div>
+                <hr/>
+				<ul  class="comments" [ngClass]="{'active': accion.id == selectedId}" (click)="selectButton(accion.id)" *ngFor="let accion of datosAcciones">
+				<li class="clearfix" [ngClass]="{'active': accion.id == selectedId}" (click)="selectButton(accion.id)">
+					
+				  <button (click)="selectAccionId(accion.id)" mat-button matStepperNext class="porcentaje btn dim btn-large-dim" type="button" [ngClass]="{'active': accion.id == selectedId}" (click)="selectButton(accion.id)" >{{accion.codigoInterno}}</button>
+				  <button (click)="selectAccionId(accion.id)" mat-button matStepperNext class="porcentaje btn dim btn-large-dim" type="button" [ngClass]="{'active': accion.id == selectedId}" (click)="selectButton(accion.id)" >60%</button>              
+				  <div class="post-comments">
+				      <p>
+				          {{accion.descripcion}}
+						  
+				      </p>
+				  </div>
+				</li>
+			
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+</div> 

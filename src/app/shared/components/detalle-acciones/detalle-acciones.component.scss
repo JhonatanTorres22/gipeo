@@ -1,0 +1,71 @@
+.blog-comment::before,
+.blog-comment::after,
+.blog-comment-form::before,
+.blog-comment-form::after{
+  content: "";
+display: table;
+clear: both;
+}
+
+.blog-comment{
+  padding-left: 15%;
+padding-right: 15%;
+}
+
+.blog-comment ul.active{
+ background: #d5d1d1;
+}
+
+.blog-comment ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.blog-comment ul li.active{
+  -webkit-box-shadow: 0px 5px 30px #797878;
+  -moz-box-shadow: 0px 5px 30px #797878;
+  }
+
+.blog-comment button{
+opacity: 1;
+filter: Alpha(opacity=100);
+-webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+     -o-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.blog-comment button.porcentaje {
+position: relative;
+float: left;
+margin-left: 0;
+margin-top: 0;
+width: 72px;
+height: 72px;
+align-items: center;
+background: #d41f35;
+color: #ffffff;
+}
+
+.blog-comment .post-comments{
+border: 1px solid #eee;
+margin-left: 160px;
+margin-right: 0px;
+height: 72px;
+padding: 10px 20px;
+position: relative;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+background: #fff;
+color: #6b6e80;
+position: relative;
+}
+
+button.dim {
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+}

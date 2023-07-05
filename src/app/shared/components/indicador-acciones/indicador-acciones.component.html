@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="text-center mb-2-3 mb-lg-6">
+        <h2 class="h1 mb-0 text-secondary">INDICADORES DE ACCIÓN ESTRATÉGICA</h2>
+    </div>
+    <hr>
+
+
+
+    <button matStepperPrevious type="button" class="btn btn-outline-secondary">VOLVER</button>
+
+    <br>
+    <br>
+    <div class="table-responsive">
+        <table class="table table-bordered text-center">
+            <thead style="padding: 2rem;">
+                <tr class="bg-light-gray">
+                    <!-- <th class="text-uppercase">codigo</th> -->
+                    <th class="text-uppercase">Indicador</th>
+                    <th class="text-uppercase">Linea Base</th>
+                    <th class="text-uppercase">Meta Vigente</th>
+                    <th class="text-uppercase">% Avance</th>
+                    <th class="text-uppercase">Responsable</th>
+                </tr>
+            </thead>
+
+            <tbody >
+                <tr *ngFor="let detalle of accionesModel">
+                    <!-- <td style="padding: 2rem;">
+                        <p class="m-0 font-12"  >
+                            {{detalle.accionEstrategicaId}} 
+                        </p>
+                    </td> -->
+                    <td style="padding: 2rem;">
+                        <button matStepperNext style="border: none; background: white;"  class="m-0 font-12" >
+                            <input mat-button type="button"readonly class="form-control" value="{{detalle.descripcion}}%">
+                        </button>
+                    </td>
+
+                    <td class="align-middle">
+                        <p class="m-0 font-12">
+                            {{detalle.lineaBase}} %
+                        </p>
+                    </td>
+
+                    <td class="align-middle">
+                        <p class="m-0 font-12">
+                            {{detalle.lineaBase}} %
+                        </p>
+                    </td>
+                    <td class="align-middle">
+                        <p class="m-0 font-12">
+                            {{detalle.lineaBase}} %
+                        </p>
+                    </td>
+                    <td class="align-middle">
+                        <p class="m-0 font-12">
+                           Juan
+                        </p>
+
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div> 
+

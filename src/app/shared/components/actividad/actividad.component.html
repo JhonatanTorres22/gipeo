@@ -1,0 +1,91 @@
+<div class="container">
+    <div class="text-center mb-2-3 mb-lg-6">
+        <h2 class="h1 mb-0 text-secondary">ACTIVIDAD DE POA</h2>
+    </div>
+    <hr>
+
+
+
+    <button matStepperPrevious type="button" class="btn btn-outline-secondary">VOLVER</button>
+
+    <br>
+    <br>
+    <div class="table-responsive">
+        <table class="table table-bordered text-center">
+            <thead style="padding: 2rem;">
+                <tr class="bg-light-gray">
+                    <th class="text-uppercase">Cierre</th>
+                    <th class="text-uppercase">Cod.</th>
+                    <th class="text-uppercase">Actividad</th>
+                    <th class="text-uppercase">Alcance</th>
+                    <th class="text-uppercase">UEN</th>
+                    <th class="text-uppercase">%Avanz.</th>
+                    <th class="text-uppercase">Presupuesto</th>
+                    <th class="text-uppercase">Gasto</th>
+                    <th class="text-uppercase">Infor</th>
+                    <th class="text-uppercase">Mejora</th>
+                </tr>
+            </thead>
+
+            <tbody *ngFor="let actividades of actividad.poa">
+                <tr >
+
+                    <td style="padding: 2rem;">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </td>
+
+                    <td style="padding: 2rem;">
+                        <p class="m-0 font-12">
+                            {{actividades.codigo}}
+                        </p>
+                    </td>
+
+                    <td class="align-middle">
+                        <p class="m-0 font-12">
+                            {{actividades.actividad}}
+                        </p>
+                    </td>
+
+                    <td class="align-middle">
+                        <p class="m-0 font-12">
+                            {{actividades.alcance}}
+                        </p>
+                    </td>
+                    <td class="align-middle">
+                        <p class="m-0 font-12">
+                           {{actividades.uen}}
+                        </p>
+                    </td>
+                    
+                    <td class="align-middle"  >
+                        <button matStepperNext style="border: none; background: white;"class="m-0 font-12" >
+                           
+                            <input [ngClass]="{'red': 50>actividades.avance, 'yellow': actividades.avance >= 50 && 60 >= actividades.avance, 'green': actividades.avance > 60}" mat-button type="button"readonly class="form-control"
+                                value="{{actividades.avance}}%">
+                        </button>
+                    </td>
+
+                    <td class="align-middle">
+                        <p class="m-0 font-12">
+                            {{actividades.presupuesto}}
+                        </p>
+                    </td>
+                    <td class="align-middle">
+                        <p class="m-0 font-12">
+                            {{actividades.gasto}}
+                        </p>
+                    </td>
+                    <td class="align-middle">
+                        <i class="m-0 font-12" [class]="actividades.mejora"></i>
+                    </td>
+                    <td class="align-middle">
+                        <i class [class]="actividades.mejora"></i>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div> 

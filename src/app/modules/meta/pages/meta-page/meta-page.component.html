@@ -1,0 +1,37 @@
+  <mat-stepper >
+    <mat-step >
+      <ng-template matStepLabel>OBJETIVO ESTRATÉGICO</ng-template>
+      <app-objetivo-card [dataObj]="objetivos" (selectID)="selectObjetivoId = $event"></app-objetivo-card>
+    </mat-step>
+
+    <mat-step  >
+      <ng-template matStepLabel>INDICADOR DE O.E.</ng-template>
+      <app-detalle-objetivo [dataObj]="objetivos" [id_objetivo]="selectObjetivoId" *mcRerender="selectObjetivoId"></app-detalle-objetivo>
+    </mat-step>
+  
+    <mat-step >
+      <ng-template matStepLabel>ACCIÓN ESTRATÉGICA</ng-template>
+      <app-detalle-acciones [id_objetivo]="selectObjetivoId" (selectAccionID)="selectAccionId = $event" *mcRerender="selectObjetivoId"></app-detalle-acciones>
+    </mat-step>
+  
+    <mat-step >
+      <ng-template matStepLabel>INDICADOR DE A.E.</ng-template>
+      <app-indicador-acciones [id_accion]="selectAccionId" *mcRerender="selectAccionId"></app-indicador-acciones>
+    </mat-step>
+
+    <mat-step >
+      <ng-template matStepLabel>ACTIVIDAD DE A.E.</ng-template>
+      <app-actividad></app-actividad>
+    </mat-step>
+
+    <mat-step >
+      <ng-template matStepLabel>INDICADOR DE POA</ng-template>
+      <app-indicador-poa></app-indicador-poa>
+    </mat-step>
+
+    <mat-step >
+      <ng-template matStepLabel>PROYECTO DE POA</ng-template>
+      <app-proyecto-poa></app-proyecto-poa>
+    </mat-step>
+
+  </mat-stepper>

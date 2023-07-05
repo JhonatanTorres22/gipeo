@@ -1,0 +1,9 @@
+
+{
+    "/api/*": {
+      "target": "https://gipeo.somee.com/gipeo/",
+      "secure": false,
+      "changeOrigin":true,
+      "logLevel": "debug"
+    }
+  }

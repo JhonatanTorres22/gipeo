@@ -1,0 +1,23 @@
+
+
+.table:not(.table-sm) thead th {
+    
+    border-bottom: none;
+    background-color: #e3eaef;
+    color: #666;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.table .table-img img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    -webkit-box-shadow: 5px 6px 15px 0px rgba(49,47,49,0.5);
+    -moz-box-shadow: 5px 6px 15px 0px rgba(49,47,49,0.5);
+    -ms-box-shadow: 5px 6px 15px 0px rgba(49,47,49,0.5);
+    box-shadow: 5px 6px 15px 0px rgba(49,47,49,0.5);
+    text-shadow: 0 0 black;
+}
+

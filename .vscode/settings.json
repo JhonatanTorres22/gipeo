@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/052da137-9232-4810-b015-91bc1252283b/resourceGroups/DefaultResourceGroup-EUS/providers/Microsoft.Web/sites/angularPrototipo",
+    "appService.deploySubpath": "dist\\proyecto_uai"
+}
